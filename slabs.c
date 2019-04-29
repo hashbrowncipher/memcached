@@ -146,6 +146,8 @@ static void * alloc_large_chunk_linux(const size_t limit)
         ptr = NULL;
     }
 
+    memset(ptr, 0, limit);
+
     return ptr;
 }
 #endif
